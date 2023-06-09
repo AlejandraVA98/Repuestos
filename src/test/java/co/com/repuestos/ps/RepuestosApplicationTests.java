@@ -1,4 +1,4 @@
-package co.com.repuestos.ps.repuestos;
+package co.com.repuestos.ps;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
