@@ -1,72 +1,31 @@
 package co.com.repuestos.ps.modelo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.Date;
 
+@Table
+@Entity
+@Data
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Usuario {
-    private int id;
+    public Usuario() {
+
+    }
+    @Id
+    @Column(name = "ID", nullable = false)
+    private Long id;
+    @Column(name = "nombre", nullable = false)
     private String nombre;
+    @Column(name = "apellido", nullable = false)
     private String apellido;
+    @Column(name = "email", nullable = true)
     private String email;
+    @Column(name = "contrasena", nullable = false)
     private String contrasena;
+    @Column(name = "fecharegistro", nullable = true)
     private Date fechaRegistro;
 
-    public Usuario() {
-    }
-
-    public Usuario(int id, String nombre, String apellido, String email, String contrasena, Date fechaRegistro) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.contrasena = contrasena;
-        this.fechaRegistro = fechaRegistro;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
-
-    public Date getFechaRegistro() {
-        return fechaRegistro;
-    }
-
-    public void setFechaRegistro(Date fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
 }
