@@ -4,7 +4,7 @@ public class InvertirArreglo {
     public static void main(String[] args) {
         int[] arreglo = {1, 2, 3, 4, 5};
 
-        System.out.println("Arreglo original: " + Arrays.toString(arreglo));
+        System.out.println("Arreglo ordenado: " + Arrays.toString(arreglo));
 
         int[] arregloInvertido = new int[arreglo.length];
 

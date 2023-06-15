@@ -23,10 +23,10 @@ public class MenuRestaurante {
                 System.out.println("Has elegido una hamburguesa. ");
                 break;
             case 3:
-                System.out.println("Has elegido papas fritas.!");
+                System.out.println("Has elegido papas fritas.");
                 break;
             default:
-                System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
+                System.out.println("Opción inválida. Por favor seleccione una opción válida.");
                 break;
         }
 
